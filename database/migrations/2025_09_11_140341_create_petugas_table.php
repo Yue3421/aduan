@@ -14,7 +14,7 @@ class CreatePetugasTable extends Migration
             $table->string('username', 25)->unique();
             $table->string('password'); // Bcrypt, tanpa batas panjang
             $table->string('telp', 13);
-            $table->enum('level', ['admin', 'petugas']);
+            $table->enum('level', ['admin', 'petugas'])->default('petugas');
             $table->timestamps();
         });
     }
